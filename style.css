@@ -1,0 +1,354 @@
+nav {
+    background-color: #333;
+    width: 100%; /* Prendre toute la largeur de l'écran */
+    padding: 10px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px; /* Espacement interne */
+}
+
+.site-name {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Utilisation de flexbox pour une disposition horizontale */
+}
+
+nav ul li {
+    margin-left: 16px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+/* Style pour la section avec une image */
+.hero-image img {
+    width: 100%; /* Prendre toute la largeur de l'écran */
+    height: auto; /* Ajuster la hauteur automatiquement */
+}
+
+body {
+    background-color: #f5f5dc; /* Couleur de fond blanc cassé */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+/* Styles pour le carrousel */
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Centrer les images horizontalement */
+    align-items: center; /* Centrer les images verticalement */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto; /* Ajuster la hauteur automatiquement */
+    max-width: 100%; /* Assurer que les images ne dépassent pas leur conteneur */
+    object-fit: cover; /* Couper l'image pour remplir le conteneur */
+    border-radius: 8px; /* Coins arrondis pour les images */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+/* Modernisation de l'affichage vidéo */
+.video-item {
+    text-align: center;
+    overflow: hidden; /* Empêche le débordement lors du zoom */
+    border-radius: 16px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition douce pour les effets */
+}
+
+.video-item:hover {
+    transform: scale(1.05); /* Zoom léger sur hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentuation de l'ombre au survol */
+}
+
+.video-item iframe {
+    width: 100%;
+    max-width: 100%; /* Prend toute la largeur disponible */
+    height: auto;
+    border-radius: 16px; /* Applique aussi les coins arrondis aux vidéos */
+}
+
+.video-item p {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500; /* Texte plus lisible */
+}
+
+.btn-add-to-cart {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px; /* Espacement au-dessus du bouton */
+    cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* Styles pour la section de présentation */
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    height: 50vh; /* Ajustez cette valeur selon vos besoins */
+}
+
+.intro-text {
+    flex: 1;
+    max-width: 50%; /* Ajustez cette valeur selon vos besoins */
+}
+
+.intro-text h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.intro-image {
+    flex: 1;
+    width: 40%; /* Ajustez cette valeur selon vos besoins */
+    height: 80%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les produits */
+.container {
+    padding: 16px;
+}
+
+.filter-section {
+    margin-bottom: 16px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    gap: 16px; /* Espace entre les produits */
+}
+
+.product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 16px;
+    background-color: #d3d3d3; /* Fond gris clair */
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%; /* Assurer que les images ne dépassent pas leur conteneur */
+    height: auto; /* Ajuster la hauteur automatiquement */
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.product-info a {
+    color: black; /* Couleur des liens en noir */
+    text-decoration: none; /* Supprimer le soulignement des liens */
+    font-weight: bold;
+    text-align: center; /* Centrer le texte */
+    transition: color 0.3s;
+}
+
+.product-info a:hover {
+    color: #555;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Styles pour le formulaire de contact */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f5f5dc;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #333;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+/* Modernisation de l'affichage vidéo */
+.video-item {
+    text-align: center;
+    overflow: hidden; /* Empêche le débordement lors du zoom */
+    border-radius: 16px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition douce pour les effets */
+}
+
+.video-item:hover {
+    transform: scale(1.05); /* Zoom léger sur hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Accentuation de l'ombre au survol */
+}
+
+.video-item iframe {
+    width: 100%;
+    max-width: 100%; /* Prend toute la largeur disponible */
+    height: auto;
+    border-radius: 16px; /* Applique aussi les coins arrondis aux vidéos */
+}
+
+.video-item p {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #333;
+    font-weight: 500; /* Texte plus lisible */
+}
+
+/* Styles responsives */
+@media (min-width: 600px) {
+    .product-list {
+        grid-template-columns: 1fr 1fr; /* Deux colonnes pour les écrans moyens */
+    }
+
+    .video-list {
+        grid-template-columns: 1fr 1fr; /* Deux colonnes pour les écrans moyens */
+        gap: 24px; /* Espacement plus grand entre les vidéos */
+    }
+
+    .contact-info, form {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    
+}
+
+@media (min-width: 900px) {
+    .product-list {
+        grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes pour les grands écrans */
+    }
+    
+    .video-list {
+        grid-template-columns: 1fr 1fr 1fr; /* Trois colonnes pour les grands écrans */
+    }
+
+    .contact-info, form {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+}
